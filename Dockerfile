@@ -1,7 +1,4 @@
-FROM debian:latest
+FROM alpine
 
-RUN \
-	apt-get update && \
-	apt-get install iperf3 -y 
-
+RUN apk add --no-cache iperf3
 CMD ["iperf3", "-s"]
